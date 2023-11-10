@@ -22,6 +22,7 @@ const HomePage = () => {
                 <li className="flex-1 text-center">l1</li>
                 <li className="flex-1 text-center">l2</li>
                 <li className="flex-1 text-center">l3</li>
+                <li className="flex-1 text-center">l4</li>
               </ul>
             </div>
           </div>)}
