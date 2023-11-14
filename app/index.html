@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup Layout</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Sidebar content -->
+        <div class="sidebar-icon home-icon">Home</div>
+        <div class="sidebar-icon settings-icon">Settings</div>
+    </div>
+    <div class="top-menu">
+        <!-- Top menu content -->
+        <div class="menu-item">Intellect</div>
+        <div class="menu-item">Physical</div>
+        <!-- ...other menu items -->
+    </div>
+    <div class="main-content">
+        <!-- Main content tiles -->
+        <div class="tile"></div>
+        <div class="tile"></div>
+        <!-- ...other tiles -->
+    </div>
+    <div class="bottom-bar">
+        <!-- Bottom bar content -->
+        <span>Love</span>
+    </div>
+</body>
+</html>
+
+<style>
+  body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #ccc;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background: #333;
+  padding: 10px 0;
+  box-sizing: border-box;
+  /* icons styling */
+}
+
+.sidebar-icon {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  background: #555;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-menu {
+  margin-left: 60px; /* Same as sidebar width */
+  height: 40px;
+  background: #aaa;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
+  padding: 0 15px;
+}
+
+.main-content {
+  margin: 50px 0 0 60px; /* Provide space for top menu and sidebar */
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile {
+  width: 150px;
+  height: 100px;
+  background: #555;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: #aaa;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+/* Add additional styling as needed */
+
+</style>
