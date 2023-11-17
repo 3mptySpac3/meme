@@ -3,7 +3,7 @@ import HamburgerIcon from './comps/hambIcon';
 import { Icon } from '@iconify/react';
 import React, { useState } from 'react';
 
-const ButtonComponent = ({ onClick, label, icon }) => {
+const ButtonComponent = ({ onClick, label }) => {
   return (
     <button onClick={onClick} className=" text-[#7699D4]  flex items-center justify-center">
       {label}
@@ -64,8 +64,10 @@ const HomePage = () => {
 
           <div>
              {/* Start of MeMe Div */}
-            <PositionedElement x={500} y={100}>
+            <PositionedElement x={150} y={125}>
+              <div className="bg-[#EDF0DA] w-[200px] h-[75px] justify flex justify-center items-center rounded-2xl font-thin text-[30px] italic  border border-black border-solid">
             MeMe
+            </div>
             </PositionedElement>
           </div> 
           {/* End of MeMe Div */}
@@ -73,7 +75,9 @@ const HomePage = () => {
           <div>
             {/* Start of Image right */}
             <PositionedElement x={1000} y={100}>
+              <div>
               Image right
+              </div>
             </PositionedElement>
           </div> 
           {/* End of Image right */}
@@ -81,15 +85,19 @@ const HomePage = () => {
           <div> 
             {/* Start of Image left */}
            <PositionedElement x={350} y={420}>
+            <div>
             Image left
+            </div>
           </PositionedElement>
           </div> 
           {/* End of Image left */}
 
           <div> 
             {/* Start of Welcome "Auth User" */}
-           <PositionedElement x={500} y={500}>
+           <PositionedElement x={550} y={300}>
+            <div className="bg-[#EDF0DA] w-[475px] h-[200px] justify flex justify-center items-center rounded-2xl font-thin text-[30px] italic border border-black border-solid">
             Welcome Auth User
+            </div>
             </PositionedElement>
           </div> 
           {/* End of Welcome "Auth User" */}
@@ -97,10 +105,12 @@ const HomePage = () => {
          <div> 
           {/* Start of Smile Button Div */}
            <PositionedElement x={300} y={500}>
+            <div>
            <ButtonComponent
                onClick={() => handleButtonClick('Smile')}
-              //  label="Smile"
+               label="Smile"
             />
+            </div>
            </PositionedElement>
           </div> 
           {/* End of Smile Button Div */}
