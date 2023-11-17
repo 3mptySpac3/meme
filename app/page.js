@@ -78,7 +78,7 @@ const HomePage = () => {
 
           <div> {/* Start of Welcome "Auth User" */}
            <PositionedElement x={500} y={500}>
-            Welcome "Auth User"
+            Welcome &quot;Auth User&quot;
             </PositionedElement>
           </div> {/* End of Welcome "Auth User" */}
 
@@ -92,7 +92,7 @@ const HomePage = () => {
           </div> {/* End of Smile Button Div */}
 
         </div> {/* End of below div */}
-      </div> /* End of main div */
+      </div> 
     );
   };
 
