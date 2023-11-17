@@ -89,7 +89,7 @@ const HomePage = () => {
           <div> 
             {/* Start of Welcome "Auth User" */}
            <PositionedElement x={500} y={500}>
-            Welcome &quot;Auth User&quot;
+            Welcome Auth User
             </PositionedElement>
           </div> 
           {/* End of Welcome "Auth User" */}
