@@ -99,7 +99,7 @@ const HomePage = () => {
            <PositionedElement x={300} y={500}>
            <ButtonComponent
                onClick={() => handleButtonClick('Smile')}
-               label="Smile"
+              //  label="Smile"
             />
            </PositionedElement>
           </div> 
