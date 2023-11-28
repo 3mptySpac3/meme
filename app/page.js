@@ -57,38 +57,50 @@ const HomePage = () => {
                   </li>
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
+                      <Link href="/Pages/Physical">
                       <Icon icon="circum:dumbbell" color="#7699D4" width="40" height="40" />
                       <span className='font-thin italic'>Physical</span>
+                      </Link>
                     </div>
                   </li>
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
+                      <Link href="/Pages/Family">
                       <Icon icon="ph:baby-thin" color="#7699D4" width="40" height="40" />
                       <span className='font-thin italic'>Family</span>
+                      </Link>
                     </div>
                   </li>
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
+                      <Link href="/Pages/Love">
                       <Icon icon="ph:heart-thin" color="#7699D4" width="40" height="40" />
                       <span className='font-thin italic'>Love</span>
+                      </Link>
                     </div>
                   </li>
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
+                      <Link href="/Pages/Friendship">
                       <Icon icon="arcticons:funmax" color="#7699D4" width="40" height="40" />
                       <span className='font-thin italic'>Friendship</span>
+                      </Link>
                     </div>
                   </li>
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
+                      <Link href="/Pages/Wealth">
                       <Icon icon="healthicons:money-bag-outline" color="#7699D4" width="40" height="40" />
                       <span className='font-thin italic'>Wealth</span>
+                      </Link>
                     </div>
                   </li>
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
+                      <Link href="/Pages/Self">
                       <Icon icon="arcticons:hwmirror" color="#7699D4" width="40" height="40" />
                       <span className='font-thin italic'>Self</span>
+                      </Link>
                     </div>
                   </li>
                 </ul>
