@@ -8,7 +8,7 @@ const NavBar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div>
+    <div >
       <div id="Above Div" style={{ height: '5vh' }} className="w-full relative flex items-center justify-center">
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -18,13 +18,13 @@ const NavBar = () => {
           </button>
           {/* Horizontal Dropdown Sidbar */}
           {isSidebarOpen&& (
-              <div className={`w-10/12 bg-[#EDF0DA] mt-16 rounded-lg transform transition-all duration-75 ease-in-out ${isSidebarOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+              <div className={`w-10/12 bg-[#EDF0DA] mt-16 rounded-lg transform transition-all duration-75 ease-in-out ${isSidebarOpen ? 'translate-y-0' : '-translate-y-full'}`} >
               <div>
                 {/*  Dropdown Sidbar content */}
-                <ul className="flex flex-row justify-between ">
+                <ul className="flex flex-row justify-between">
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center ">
-                      <Link href="/Pages/Intellect">
+                      <Link href="/Pages/Intellect" >
                       <Icon icon="ph:brain-thin" color="#7699D4" width="40" height="40" />
                       <span className='font-thin italic'>Intellect</span>
                       </Link>
