@@ -84,6 +84,9 @@ const NavBar = () => {
             </div>)}
         </div> 
         {/* End of above div */}
+
+        <div id="Border Line" className="border-b-2 border-[#EDF0DA] w-full mt-16"></div> 
+        {/* Border Line seperating top from buttom */}
     </div>
   );
 }
