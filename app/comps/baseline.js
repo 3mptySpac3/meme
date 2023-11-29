@@ -1,5 +1,5 @@
 "use client";
-import NavBar from "@/app/comps/nav";
+import NavBar from "./nav"
 import React, {useState, useEffect}  from 'react';
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
@@ -15,20 +15,18 @@ const PositionedElement = ({ x, y, children }) => {
   return <div style={style}>{children}</div>;
 };
 
-const SelfPage = () => {
+
+const BaseLine = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
+
   return (
     <div className=" min-h-screen bg-[#303633]">
-      {/* Top */}
-      <div className="pag">
-      <NavBar />
-      </div>
-      <div>
+      {/* Bottom */}
       <div>
         <PositionedElement x={20} y={137}>
           <div className="bg-[#EDF0DA] w-[60px] h-[350px] rounded-2xl font-thin italic  border border-black hover:shadow-md ">
@@ -100,7 +98,7 @@ const SelfPage = () => {
       <div>
         <PositionedElement x={117} y={520}>
           <div style={{ letterSpacing: '15px' }} className="bg-[#EDF0DA] w-[1044px] h-[60px] rounded-2xl text-[40px] flex justify-center items-center font-thin border border-black">
-            Self
+            Intellect
           </div>
         </PositionedElement>
       </div>
@@ -112,9 +110,15 @@ const SelfPage = () => {
           </div>
         </PositionedElement>
       </div>
-      </div>
+
+
+      {/* End bottom */}
     </div>
+
   );
+
 };
 
-export default SelfPage;
+
+
+export default BaseLine;
