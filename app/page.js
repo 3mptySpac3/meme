@@ -1,11 +1,13 @@
 "use client";
 import HamburgerIcon from './comps/hambIcon';
 import { Icon } from '@iconify/react';
-import React, { useState } from 'react';
+import React, { useState,  } from 'react';
 import LineArt1 from './comps/Art/lineart1';
 import LineArt2 from './comps/Art/lineart2';
 import LineArt3 from './comps/Art/lineart3';
 import Link from 'next/link';
+
+
 
 
 const ButtonComponent = ({ onClick, label }) => {
@@ -83,7 +85,7 @@ const HomePage = () => {
                     <div className="flex flex-col items-center justify-center">
                       <Link href="/Pages/Friendship">
                       <Icon icon="arcticons:funmax" color="#7699D4" width="40" height="40" />
-                      <span className='font-thin italic'>Friendship</span>
+                      <span className='font-thin italic'>Friends</span>
                       </Link>
                     </div>
                   </li>
@@ -132,6 +134,7 @@ const HomePage = () => {
             <PositionedElement x={1100} y={115}>
               <div>
                 <LineArt1 />
+                
               </div>
             </PositionedElement>
           </div> 

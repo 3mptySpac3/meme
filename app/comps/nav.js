@@ -1,11 +1,12 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState,  } from 'react';
 import HamburgerIcon from './hambIcon';
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
 const NavBar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
 
   return (
     <div >
@@ -58,7 +59,7 @@ const NavBar = () => {
                     <div className="flex flex-col items-center justify-center">
                       <Link href="/Pages/Friendship">
                       <Icon icon="arcticons:funmax" color="#7699D4" width="40" height="40" />
-                      <span className='font-thin italic'>Friendship</span>
+                      <span className='font-thin italic'>Friends</span>
                       </Link>
                     </div>
                   </li>
