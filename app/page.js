@@ -52,7 +52,9 @@ const HomePage = () => {
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center ">
                       <Link href="/Pages/Intellect">
+                      <div className='flex justify-center'>
                       <Icon icon="ph:brain-thin" color="black" width="40" height="40" />
+                      </div>
                       <span className='font-thin italic'>Intellect</span>
                       </Link>
                     </div>
@@ -60,7 +62,9 @@ const HomePage = () => {
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
                       <Link href="/Pages/Physical">
+                      <div className='flex justify-center'>
                       <Icon icon="circum:dumbbell" color="black" width="40" height="40" />
+                      </div>
                       <span className='font-thin italic'>Physical</span>
                       </Link>
                     </div>
@@ -68,7 +72,9 @@ const HomePage = () => {
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
                       <Link href="/Pages/Family">
+                      <div className='flex justify-center'>
                       <Icon icon="ph:baby-thin" color="black" width="40" height="40" />
+                      </div>
                       <span className='font-thin italic'>Family</span>
                       </Link>
                     </div>
@@ -76,7 +82,9 @@ const HomePage = () => {
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
                       <Link href="/Pages/Love">
+                      <div className='flex justify-center'>
                       <Icon icon="ph:heart-thin" color="black" width="40" height="40" />
+                      </div>
                       <span className='font-thin italic'>Love</span>
                       </Link>
                     </div>
@@ -84,7 +92,9 @@ const HomePage = () => {
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
                       <Link href="/Pages/Friendship">
+                      <div className='flex justify-center'>
                       <Icon icon="arcticons:funmax" color="black" width="40" height="40" />
+                      </div>
                       <span className='font-thin italic'>Friends</span>
                       </Link>
                     </div>
@@ -92,7 +102,9 @@ const HomePage = () => {
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
                       <Link href="/Pages/Wealth">
+                      <div className='flex justify-center'>
                       <Icon icon="healthicons:money-bag-outline" color="black" width="40" height="40" />
+                      </div>
                       <span className='font-thin italic'>Wealth</span>
                       </Link>
                     </div>
@@ -100,7 +112,9 @@ const HomePage = () => {
                   <li className="flex-1 text-center">
                     <div className="flex flex-col items-center justify-center">
                       <Link href="/Pages/Self">
-                      <Icon icon="arcticons:hwmirror" color="black" width="40" height="40" />
+                      <div className='flex justify-center'>
+                      <Icon icon="arcticons:hwmirror" color="black" width="40" height="40"/>
+                      </div>
                       <span className='font-thin italic'>Self</span>
                       </Link>
                     </div>
