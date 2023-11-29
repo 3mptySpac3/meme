@@ -94,7 +94,20 @@ const SettingsPage = () => {
           </div>
         </PositionedElement>
       </div>
+      <PositionedElement x={1205} y={290}>
+      <div className="relative group transition duration-500 hover:translate-x-0.5">
+      <Link href="/">
+        <div className="bg-black w-[50px] h-[50px] rounded-full shadow-lg shadow-black"></div>
+        {isMounted && (
+          <div className="absolute inset-0 flex justify-center items-center">
+            <Icon icon="arcticons:next-player" color="white" width="35" height="35" />
+          </div>
+        )}
+        </Link>
       </div>
+    </PositionedElement>
+      </div>
+
     </div>
   );
 }
