@@ -113,7 +113,7 @@ const SelfPage = () => {
         </PositionedElement>
       </div>
       </div>
-      <PositionedElement x={1205} y={290}>
+      <PositionedElement x={1205} y={285}>
       <div className="relative group transition duration-500 hover:translate-x-0.5">
       <Link href="/Pages/Intellect">
         <div className="bg-black w-[50px] h-[50px] rounded-full shadow-lg shadow-black"></div>
