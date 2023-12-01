@@ -35,7 +35,7 @@ const HomePage = () => {
     };
 
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-[#303633]">
+      <div className="flex flex-col items-center justify-center min-h-screen min-w-screen bg-[#303633] ">
         <div id="Above Div" style={{ height: '5vh' }} className="w-full relative flex items-center justify-center">
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -46,7 +46,7 @@ const HomePage = () => {
           {/* Horizontal Dropdown Sidbar */}
           {isSidebarOpen&& (
               <div className={`w-10/12 bg-[#EDF0DA] mt-16 rounded-lg transform transition-all duration-75 ease-in-out ${isSidebarOpen ? 'translate-y-0' : '-translate-y-full'}`}>
-              <div>
+              <div className=' border-black'>
                 {/*  Dropdown Sidbar content */}
                 <ul className="flex flex-row justify-between ">
                   <li className="flex-1 text-center">

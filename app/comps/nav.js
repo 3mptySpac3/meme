@@ -20,7 +20,7 @@ const NavBar = () => {
           {/* Horizontal Dropdown Sidbar */}
           {isSidebarOpen&& (
               <div className={`w-10/12 bg-[#EDF0DA] mt-16 rounded-lg transform transition-all duration-75 ease-in-out ${isSidebarOpen ? 'translate-y-0' : '-translate-y-full'}`} >
-              <div>
+              <div className='border-black'>
                 {/*  Dropdown Sidbar content */}
                 <ul className="flex flex-row justify-between">
                   <li className="flex-1 text-center">

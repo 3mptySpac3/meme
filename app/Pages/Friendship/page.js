@@ -83,12 +83,12 @@ const FriendshipPage = () => {
 
 
             <div className=" transition duration-500 hover:-translate-y-0.5">
-            <PositionedElement x={9} y={160}>
+            <PositionedElement x={9} y={155}>
               <div className="bg-black w-[40px] h-[40px] rounded-full shadow-lg shadow-black">
               </div>
             </PositionedElement>
 
-            <PositionedElement x={10} y={160}>
+            <PositionedElement x={10} y={155}>
             <div>
             {isMounted && (
              <Icon icon="ph:plus-thin" color="white" width="40" height="40" />
