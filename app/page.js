@@ -35,7 +35,7 @@ const HomePage = () => {
     };
 
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen min-w-screen bg-[#303633] ">
+      <div className="flex flex-col items-center justify-center min-h-screen min-w-screen bg-[#303633] relative">
         <div id="Above Div" style={{ height: '5vh' }} className="w-full relative flex items-center justify-center">
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -145,7 +145,7 @@ const HomePage = () => {
 
           <div>
             {/* Start of Image right */}
-            <PositionedElement x={1100} y={115}>
+            <PositionedElement x={1} y={105}>
               <div>
                 <LineArt1 />
                 
@@ -156,7 +156,7 @@ const HomePage = () => {
 
           <div> 
             {/* Start of image left  */}
-           <PositionedElement x={30} y={300}>
+           <PositionedElement x={100} y={200}>
             <div>
               <LineArt2 />
             </div>

@@ -1,6 +1,6 @@
 const LineArt2 = () => {
   return (
-    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
       {/* Define the lines */}
       <line x1="10" y1="100" x2="200" y2="20" stroke="#EDF0DA" strokeWidth=".5" />
       <line x1="190" y1="75" x2="170" y2="140" stroke="#EDF0DA" strokeWidth=".5" />
