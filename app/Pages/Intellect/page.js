@@ -5,6 +5,14 @@ import { Icon } from '@iconify/react';
 import Link from 'next/link';
 import predefinedTasks from './Tasks.json';
 
+const images = [
+  'image/1.jpg',
+  'image/2.jpg',
+  'image/3.jpg',
+  'image/4.jpg',
+  'image/5.jpg',
+];
+
 
 
 
@@ -32,6 +40,20 @@ const IntellectPage = () => {
     setIsMounted(true);
   }, []);
 
+  useEffect(() => {
+    const initialData = predefinedTasks; // assuming predefinedTasks is your JSON data
+    setTasks(initialData);
+  }, []);
+
+  useEffect(() => {
+    // Load tasks from local storage on component mount
+    const savedTasks = localStorage.getItem('tasks');
+    if (savedTasks) {
+      setMiddleBoxTasks(JSON.parse(savedTasks));
+    }
+  }, []);
+
+
   const toggleTaskForm = () => {
     setShowTaskForm(!showTaskForm);
   };
@@ -50,29 +72,37 @@ const IntellectPage = () => {
   };
 
 
+  // const addTask = (task) => {
+  //   setTasks([...tasks, task]);
+  // };
 
-
-  const addTask = (task) => {
-    setTasks([...tasks, task]);
-  };
+//   // Function to add a new task
+// const addNewTask = (newTaskData) => {
+//   const newId = new Date().getTime(); // simple way to generate a unique ID
+//   const newTask = { id: newId, ...newTaskData };
+//   const updatedTasks = [...tasks, newTask];
+//   setTasks(updatedTasks);
+//   // Optional: Save to local storage
+//   localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+// };
 
     // Function to delete a task
   const deleteTask = (taskId) => {
     setMiddleBoxTasks(middleBoxTasks.filter(task => task.id !== taskId));
   };
 
-  // Function to mark a task as completed
-  const completeTask = (taskId) => {
-    const updatedTasks = middleBoxTasks.map(task => {
-      if (task.id === taskId) {
-        return { ...task, completed: true };
-      }
-      return task;
-    });
-    setMiddleBoxTasks(updatedTasks);
-    // Update completed tasks count
-    setCompletedTasks(updatedTasks.filter(task => task.completed).length);
-  };
+  // // Function to mark a task as completed
+  // const completeTask = (taskId) => {
+  //   const updatedTasks = middleBoxTasks.map(task => {
+  //     if (task.id === taskId) {
+  //       return { ...task, completed: true };
+  //     }
+  //     return task;
+  //   });
+  //   setMiddleBoxTasks(updatedTasks);
+  //   // Update completed tasks count
+  //   setCompletedTasks(updatedTasks.filter(task => task.completed).length);
+  // };
 
   const handleOverlayClick = () => {
     setShowTaskForm(false);
@@ -89,19 +119,22 @@ const IntellectPage = () => {
   };
 
 
-  const addPredefinedTask = (predefinedTask) => {
-    setTasks([...tasks, predefinedTask]);
-    // Optionally, close the task form overlay after adding a task
-    setShowTaskForm(false);
-  };
+  // const addPredefinedTask = (predefinedTask) => {
+  //   setTasks([...tasks, predefinedTask]);
+  //   // Optionally, close the task form overlay after adding a task
+  //   setShowTaskForm(false);
+  // };
 
   const addManualTask = () => {
     const newTask = {
+      id: new Date().getTime(), // unique ID for the new task
       title: manualTaskTitle,
       description: manualTaskDescription
     };
-    // Add the new task to middleBoxTasks
-    setMiddleBoxTasks([...middleBoxTasks, newTask]);
+    const updatedTasks = [...middleBoxTasks, newTask];
+    setMiddleBoxTasks(updatedTasks);
+    // Save updated tasks to local storage
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
     // Reset form fields
     setManualTaskTitle('');
     setManualTaskDescription('');
@@ -164,15 +197,39 @@ const IntellectPage = () => {
 
 
   // Calculate progress
-  const totalTasks = middleBoxTasks.length;
+  const totalTasks = 5;
   const completedTasksCount = middleBoxTasks.filter(task => task.completed).length;
   const completedPercent = totalTasks > 0 ? (completedTasksCount / totalTasks) * 100 : 0;
 
 
 
 
+  const middleBoxStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    width: '1065px',
+    height: '375px',
+    backgroundColor: 'black',
+    borderRadius: '2xl',
+    border: '1px solid #EDF0DA',
+    padding: '20px',
+  };
+
+  const taskListStyle = {
+    flex: '1', // Take up remaining space
+    marginRight: '20px', // Add some space between tasks and progress bar
+    color: 'black',
+    maxHeight: '100%', // Take full available height
+    overflowY: 'auto', // Enable vertical scrolling
+    padding: '10px',
+  };
+  
+
+
+
   return (
-    <div className=" min-h-screen bg-[#303633]">
+    <div className=" min-h-screen bg-[#303633] text-black">
       {/* Top */}
       <div className="pag">
       <NavBar />
@@ -286,6 +343,7 @@ const IntellectPage = () => {
           </div>
         </PositionedElement>
       </div>
+      
 
 
       <div>
@@ -296,34 +354,41 @@ const IntellectPage = () => {
         </PositionedElement>
       </div>
 
-      <div className="MIDDLE BOX text-white">
+      <div className="MIDDLE BOX text-[#EDF0DA] ">
   <PositionedElement x={105} y={125}>
-    <div className="bg-black w-[1065px] h-[375px] rounded-2xl font-thin italic bg-opacity-90 border border-[#EDF0DA]">
-      {middleBoxTasks.map((task, index) => (
-        <div key={task.id || index} style={{ /* Add some styles here */ }}>
-          <h3>{task.title}</h3>
-          <p>{task.description}</p>
-          <button onClick={() => toggleTaskCompletion(task.id)}>
-            {task.completed ? 'Mark as Incomplete' : 'Mark as Completed'}
-          </button>
-          <button onClick={() => deleteTask(task.id)}>Delete</button>
-          {/* Other task details */}
-        </div>
-      ))}
+    <div style={middleBoxStyle}>
+          {/* Task List */}
+          <div style={taskListStyle}>
+            {middleBoxTasks.map((task, index) => (
+              <div key={task.id || index} style={taskItemStyle}>
+                <h3>{task.title}</h3>
+                <p>{task.description}</p>
+                <button onClick={() => toggleTaskCompletion(task.id)}>
+                  {task.completed ? 'Mark as Incomplete' : 'Mark as Completed'}
+                </button>
+                <button onClick={() => deleteTask(task.id)}>Delete</button>
+              </div>
+            ))}
+          </div>
+
       {/* Milestone Tracker */}
       <div>
-        Milestone Progress: {completedTasks} / 10
-        <div style={progressBarContainerStyle}>
-          <div style={progressBarFillerStyle(completedPercent)}>
-            <span style={{ padding: '5px', color: 'white' }}>
-              {`${completedPercent.toFixed(0)}%`}
-            </span>
+            Milestone Progress: {completedTasks} / 5
+            <div style={progressBarContainerStyle}>
+              <div style={progressBarFillerStyle(completedPercent)}>
+                <span style={{ padding: '5px', color: 'white' }}>
+                  {`${completedPercent.toFixed(0)}%`}
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+          {/* Display the Image based on Progress */}
     </div>
   </PositionedElement>
+  {/* Display the Image based on Progress */}
 </div>
+{/* Display the Image based on Progress */}
+
 
       <PositionedElement x={1205} y={285}>
       <div className="relative group transition duration-500 hover:translate-x-0.5">
